@@ -1,0 +1,35 @@
+@startuml
+
+start
+
+:Mottar epost med lenke til eksamen; 
+note right: Bedriften har oversikt over deltagere\nsom har deltatt på kurset
+
+if (Har deltager bruker på \neksamensiden) then (Ja)
+  :Logger inn;
+else (Nei)
+  :Oppretter bruker;
+  note right: Eposten er den samme som\neksamenlenken er sendt på\npassord er valgfritt
+endif
+
+:Eksamen starter; 
+
+:Deltager svarer på spørsmål;
+note right: Deltager har oversikt over progresjon\n1 av 4 svaralternativer er riktig
+
+:Eksamen fullført;
+note left: Ferdig med å svare på spørmål\neller tid utløpte
+
+:Resultat vises;
+note right: Oversikt over poeng, antall riktige og feil\nsvar og om testen ble bestått
+
+if (Bestått) then (Ja)
+  :Sertifikat blir tilgjengelig på profil;
+  :Kopi sendes til brukers epost;
+else (Nei)
+  :Elsamen merkes som ikke besått;
+endif
+
+stop
+
+@enduml
