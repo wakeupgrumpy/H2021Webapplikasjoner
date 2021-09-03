@@ -1,0 +1,147 @@
+$text-base: #343434;
+$text-base-light: #484848;
+$text-white: white;
+$border-color: #bdbdbd;
+$shaddow-color: lightblue;
+$highlight-color: #5ad2c1;
+$input-bg-color: #fefefe;
+
+$font-small: 0.9rem;
+$font-normal: 1rem;
+$font-large: 1.2rem;
+
+* {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  max-width: 60vw;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 2rem;
+
+  box-shadow: 0px 10px 10px -10px $border-color;
+
+  h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: $font-large;
+    color: $text-base;
+  }
+
+  p {
+    color: $text-base-light;
+    font-size: $font-large;
+  }
+}
+
+main {
+  margin: auto;
+  max-width: 80%;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+button {
+  color: $text-white;
+  background-color: $highlight-color;
+  padding: 0.1rem 1rem;
+  border: none;
+  border-radius: 4px;
+  width: auto;
+  align-self: end;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: darken($highlight-color, 20);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.section-add-todo {
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: $font-small;
+      font-weight: bold;
+      margin: 1rem 0 0.3rem 0;
+    }
+
+    input {
+      box-sizing: border-box;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      background-color: $input-bg-color;
+      padding: 0.5rem;
+      width: 50%;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      box-sizing: border-box;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      background-color: $input-bg-color;
+      resize: none;
+      padding: 0.5rem;
+    }
+
+    button {
+      font-size: $font-large;
+      font-weight: bold;
+      padding: 0.4rem 3rem;
+    }
+  }
+}
+
+.section-my-todos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  h2 {
+    align-self: flex-start;
+    width: 100%;
+    margin: 0;
+    font-size: $font-large;
+    font-weight: bold;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    max-width: 28%;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0px 10px 20px -5px $shaddow-color;
+
+    h3,
+    p,
+    button {
+      font-size: $font-normal;
+      margin: 0.3rem;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+}

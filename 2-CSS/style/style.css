@@ -1,0 +1,159 @@
+* {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  max-width: 60vw;
+  margin: auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  -webkit-box-shadow: 0px 10px 10px -10px #bdbdbd;
+          box-shadow: 0px 10px 10px -10px #bdbdbd;
+}
+
+header h1 {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #343434;
+}
+
+header p {
+  color: #484848;
+  font-size: 1.2rem;
+}
+
+main {
+  margin: auto;
+  max-width: 80%;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+button {
+  color: white;
+  background-color: #5ad2c1;
+  padding: 0.1rem 1rem;
+  border: none;
+  border-radius: 4px;
+  width: auto;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #2a9c8c;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.section-add-todo form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-add-todo form label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 1rem 0 0.3rem 0;
+}
+
+.section-add-todo form input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  background-color: #fefefe;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.section-add-todo form textarea {
+  width: 100%;
+  height: 150px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  background-color: #fefefe;
+  resize: none;
+  padding: 0.5rem;
+}
+
+.section-add-todo form button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.4rem 3rem;
+}
+
+.section-my-todos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.section-my-todos h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100%;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.section-my-todos article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 28%;
+  padding: 1rem;
+  margin-top: 2rem;
+  -webkit-box-shadow: 0px 10px 20px -5px lightblue;
+          box-shadow: 0px 10px 20px -5px lightblue;
+}
+
+.section-my-todos article h3,
+.section-my-todos article p,
+.section-my-todos article button {
+  font-size: 1rem;
+  margin: 0.3rem;
+}
+
+.section-my-todos article button {
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
