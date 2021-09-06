@@ -3,7 +3,7 @@ const changeTextInElement = (id, content = null) => {
   const element = document.getElementById(id);
   element
     ? (element.innerText = content)
-    : console.log($`HTML element med id: ${id} finnes ikke.`);
+    : console.log(`HTML element med id: ${id} finnes ikke.`);
 };
 
 // Oppgave 1
