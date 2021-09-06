@@ -26,4 +26,4 @@ Laget tre wireframes (lenke til [draw.io](https://viewer.diagrams.net/?highlight
 
 ## Oppgave 6 - Trello
 
-![Bilde av bordet](https://github.com/wakeupgrumpy/H2021Webapplikasjoner/blob/main/images/task_6_trello.png?raw=true)
+![Bilde av bordet](https://github.com/wakeupgrumpy/H2021Webapplikasjoner/blob/main/1-Intro-Webapplikasjoner/images/task_6_trello.png?raw=true)
