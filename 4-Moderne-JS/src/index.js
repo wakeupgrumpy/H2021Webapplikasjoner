@@ -374,7 +374,7 @@ line 2`;
     let one = () => 1;
     let two = (x) => x + x;
     let three = (x, y) => x + y;
-    let four = (x, y) => (x += ++x < y ? four(x, y) : 0);
+    let four = (x, y) => (x += ++x < y && four(x, y));
 
     // Don't make changes below this line
 
