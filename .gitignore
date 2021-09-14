@@ -35,3 +35,5 @@ sketch
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,react
+5-Intro-React/.eslintcache
+5-Intro-React/package-lock.json
