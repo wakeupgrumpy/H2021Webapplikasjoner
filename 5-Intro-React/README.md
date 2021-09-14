@@ -19,14 +19,14 @@
 
   Create an array `const food = ['Pizza', 'Hamburger', 'Coke'];` Render `<ul><li></li></ul>` in App.js by using `food.map()` inside the return (). Remember to add a key to `<li>`. Remember to add this inside App.js. Not as a seperate function.
 
-- [ ] **Lists Component**
+- [x] ~~**Lists Component**~~
 
   Create a `<Food>` component. Use this in App.js. Add "food"-prop to the `<Food>` component. Render the food list (`<ul><li></li></ul>` from above) inside the `<Food>` component by using props. (Send the food array as prop).
 
-- [ ] **Children prop**
-Create a <Wrapper> component with a <section></section>
-Add this to App.js
-Make it possible to render children between the <Wrapper></Wrapper> component. Use (props.children) in the <Wrapper> component.
+- [x] ~~**Children prop**~~
+  
+  Create a `<Wrapper>` component with a `<section></section>`. Add this to App.js
+Make it possible to render children between the `<Wrapper></Wrapper>` component. Use (props.children) in the `<Wrapper>` component.
 
 - [ ] **Styling**
   
