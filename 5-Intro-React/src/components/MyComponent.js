@@ -1,7 +1,7 @@
-const MyComponent = () => {
+const MyComponent = ({title}) => {
 
   return (
-    <h1>My First Component</h1>
+    <h1>{title}</h1>
   )
 
 }

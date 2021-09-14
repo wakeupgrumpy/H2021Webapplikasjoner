@@ -3,11 +3,11 @@
 
 ### Tasks
 
-- [x] **Basic Component**
+- [x] ~~**Basic Component**~~
 
-  Create a component called <MyComponent> in the components folder and render a `<h1>My First Component</h1>` Use MyComponent in App.js
+  Create a component called `<MyComponent>` in the components folder and render a `<h1>My First Component</h1>` Use MyComponent in App.js
 
-- [ ] **Basic Prop**
+- [x] ~~**Basic Prop**~~
 
   Add a "title" prop on MyComponent and make it render "It Works"
 

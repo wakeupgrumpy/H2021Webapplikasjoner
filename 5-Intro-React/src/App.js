@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <h1>The magic happens here</h1>
-      <MyComponent />
+      <MyComponent title={'It Works!'}/>
     </>
   );
 }
