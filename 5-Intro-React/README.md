@@ -3,7 +3,7 @@
 
 ### Tasks
 
-- [ ] **Basic Component**
+- [x] **Basic Component**
 
   Create a component called <MyComponent> in the components folder and render a `<h1>My First Component</h1>` Use MyComponent in App.js
 
