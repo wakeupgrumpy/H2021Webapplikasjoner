@@ -11,7 +11,7 @@
 
   Add a "title" prop on MyComponent and make it render "It Works"
 
-- [ ] **Passing props to a child component**
+- [x] ~~**Passing props to a child component**~~
 
   Refactor the `<h1>` in `<MyComponent>` to be a `<Title>` component. It should render "It Works". Refactor means that the `<h1>` should live inside the newly created `<Title>` component
 

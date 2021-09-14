@@ -1,7 +1,9 @@
+import Title from "./Title";
+
 const MyComponent = ({title}) => {
 
   return (
-    <h1>{title}</h1>
+    <Title title={title}/>
   )
 
 }
