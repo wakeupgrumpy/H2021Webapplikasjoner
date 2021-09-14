@@ -28,7 +28,7 @@
   Create a `<Wrapper>` component with a `<section></section>`. Add this to App.js
 Make it possible to render children between the `<Wrapper></Wrapper>` component. Use (props.children) in the `<Wrapper>` component.
 
-- [ ] **Styling**
+- [x] ~~**Styling**~~
   
   Add (`className='flex'`) the `<section>` in `<Wrapper>` to flex the items on `<Wrapper>`. Add necessary styling to the styles.scss
 

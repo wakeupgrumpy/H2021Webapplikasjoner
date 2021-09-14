@@ -1,6 +1,6 @@
 const Wrapper = (props) => {
   return (
-    <section>
+    <section className='flex'>
       {props.children}
     </section>
   )

@@ -11,6 +11,7 @@ const App = () => {
   return (
     <Wrapper>
       <h1>The magic happens here</h1>
+
       <MyComponent title={'It Works!'} />
       <Food food={food} />
     </Wrapper>
