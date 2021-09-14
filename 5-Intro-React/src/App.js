@@ -1,4 +1,5 @@
 import React from 'react';
+import Food from './components/Food';
 import MyComponent from './components/MyComponent';
 import './styles.scss';
 
@@ -10,11 +11,7 @@ const App = () => {
     <>
       <h1>The magic happens here</h1>
       <MyComponent title={'It Works!'} />
-      <ul>
-        {food.map(e => 
-          <li key={e}>{e}</li>
-        )}
-      </ul>
+      <Food food={food}/>
     </>
   );
 }
