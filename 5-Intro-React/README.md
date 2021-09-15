@@ -36,11 +36,11 @@ Make it possible to render children between the `<Wrapper></Wrapper>` component.
   
   Add a `<button>` to App.js. Listen to click-event on this button. `console.log("Clicked")` when clicking the button.
 
-- [ ] **Input**
+- [x] ~~**Input**~~
   
   Add an input field to App.js. Listen to change-event on this field `console.log("change")` when writing in this input.
 
-- [ ] **Make the input field controlled (state)**
+- [x] ~~**Make the input field controlled (state)**~~
 
   Use useState to store the input value. And add the `value={state}` to the input field to make it (controlled).
 

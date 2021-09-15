@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Food from './components/Food';
 import MyComponent from './components/MyComponent';
 import Wrapper from './components/Wrapper';
@@ -8,7 +8,14 @@ const App = () => {
 
   const food = ['Pizza', 'Hamburger', 'Coke'];
 
-  const buttonClicker = () => console.log("Clicked")
+  const [state, setSate] = useState('');
+
+  const buttonClicker = () => console.log("Clicked");
+  const inputChanged = (e) => {
+    console.log("Change");
+    setSate(e.target.value)
+  }
+
 
   return (
     <Wrapper>
@@ -18,6 +25,7 @@ const App = () => {
       <Food food={food} />
 
       <button type='button' onClick={buttonClicker}>Click me</button>
+      <input type='text' value={state} onChange={inputChanged}/>
     </Wrapper>
   );
 }
