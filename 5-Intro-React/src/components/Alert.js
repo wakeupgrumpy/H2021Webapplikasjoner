@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 
-const Alert = () => {
+const Alert = ({inputFromChild, isClicked}) => {
 
     const [state, setSate] = useState('');
 
-    const buttonClicker = () => console.log(state);
+    const buttonClicker = () => {
+      isClicked(Boolean(state));
+      inputFromChild(state)
+    }
     const inputChanged = (e) => {
       console.log("Change");
       setSate(e.target.value)
     }
 
     return (
-        <>
-            <button type='button' onClick={buttonClicker}>Click me</button>
-            <input type='text' value={state} onChange={inputChanged}/>
-        </>
+      <div>
+        <button type='button' onClick={buttonClicker}>Click me</button>
+        <input type='text' value={state} onChange={inputChanged}/>
+      </div>
     )
 }
 

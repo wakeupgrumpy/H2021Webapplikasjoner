@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Alert from './components/Alert';
 import Food from './components/Food';
 import MyComponent from './components/MyComponent';
@@ -7,6 +8,8 @@ import './styles.scss';
 const App = () => {
 
   const food = ['Pizza', 'Hamburger', 'Coke'];
+  const [inputFromChild, setInputFromChild] = useState('');
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <Wrapper>
@@ -14,8 +17,10 @@ const App = () => {
 
       <MyComponent title={'It Works!'} />
       <Food food={food} />
-      <Alert />
-
+      <Alert inputFromChild={setInputFromChild} isClicked={setIsClicked}/>
+      {isClicked && (
+        <p>{inputFromChild}</p>
+      )}
     </Wrapper>
   );
 }
