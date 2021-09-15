@@ -44,7 +44,7 @@ Make it possible to render children between the `<Wrapper></Wrapper>` component.
 
   Use useState to store the input value. And add the `value={state}` to the input field to make it (controlled).
 
-- [ ] **Combine the button and input**
+- [x] ~~**Combine the button and input**~~
 
   When clicking the button above alert (or console.log) the content of the inputfield.
 

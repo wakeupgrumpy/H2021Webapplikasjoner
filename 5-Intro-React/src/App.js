@@ -10,7 +10,7 @@ const App = () => {
 
   const [state, setSate] = useState('');
 
-  const buttonClicker = () => console.log("Clicked");
+  const buttonClicker = () => console.log(state);
   const inputChanged = (e) => {
     console.log("Change");
     setSate(e.target.value)
