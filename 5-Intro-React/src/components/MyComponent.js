@@ -1,11 +1,5 @@
 import Title from "./Title";
 
-const MyComponent = ({title}) => {
-
-  return (
-    <Title title={title}/>
-  )
-
-}
+const MyComponent = ({title}) => <Title title={title}/>;
 
 export default MyComponent;

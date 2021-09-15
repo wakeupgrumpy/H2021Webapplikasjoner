@@ -1,7 +1,7 @@
 # Intro React
 
 
-### Tasks
+### :clipboard: Tasks
 
 - [x] ~~**Basic Component**~~
 

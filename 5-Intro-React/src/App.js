@@ -8,14 +8,13 @@ import './styles.scss';
 const App = () => {
 
   const food = ['Pizza', 'Hamburger', 'Coke'];
+  
   const [inputFromChild, setInputFromChild] = useState('');
   const [isClicked, setIsClicked] = useState(false);
 
   return (
     <Wrapper>
-      <h1>The magic happens here</h1>
-
-      <MyComponent title={'It Works!'} />
+      <MyComponent title={'☠️ It Works!'} />
       <Food food={food} />
       <Alert inputFromChild={setInputFromChild} isClicked={setIsClicked}/>
       {isClicked && (

@@ -1,9 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  width: 40vw;
+  margin: 0 auto;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
 }
 
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: .2rem;
+  
+  border-bottom: 1px solid lightslategray;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+  max-width: 20vw;
+
+  border: 1px solid lightslategray;
+  border-radius: .3rem;
+
+  button {
+    order: 2;
+    margin-top: .5rem;
+  }
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+  border-left: 3px solid lightgray;
+  padding-left: 1rem;
 }
