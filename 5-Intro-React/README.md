@@ -48,7 +48,7 @@ Make it possible to render children between the `<Wrapper></Wrapper>` component.
 
   When clicking the button above alert (or console.log) the content of the inputfield.
 
-- [ ] **Refactor button and input**
+- [x] **Refactor button and input**
 
   Create an `<Alert>` component. Add this to App.js. Move the `<input>`, `<button>` and state from above to this component
 
