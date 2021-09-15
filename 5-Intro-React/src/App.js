@@ -8,12 +8,16 @@ const App = () => {
 
   const food = ['Pizza', 'Hamburger', 'Coke'];
 
+  const buttonClicker = () => console.log("Clicked")
+
   return (
     <Wrapper>
       <h1>The magic happens here</h1>
 
       <MyComponent title={'It Works!'} />
       <Food food={food} />
+
+      <button type='button' onClick={buttonClicker}>Click me</button>
     </Wrapper>
   );
 }

@@ -32,7 +32,7 @@ Make it possible to render children between the `<Wrapper></Wrapper>` component.
   
   Add (`className='flex'`) the `<section>` in `<Wrapper>` to flex the items on `<Wrapper>`. Add necessary styling to the styles.scss
 
-- [ ] **Event**
+- [x] ~~**Event**~~
   
   Add a `<button>` to App.js. Listen to click-event on this button. `console.log("Clicked")` when clicking the button.
 
