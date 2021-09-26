@@ -1,4 +1,4 @@
-import Button from "./shared/Button";
+import Button from "../shared/Button";
 
 const TodoForm = ({ addTodo, formData, setFormData, setModal }) => {
   const handleSubmit = (event) => {

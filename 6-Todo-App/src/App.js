@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Layout from "./components/Layout";
-import TodoContainer from "./components/TodoContainer";
+import TodoContainer from "./components/Todo/TodoContainer";
 import Footer from "./components/Footer";
 
 function App() {

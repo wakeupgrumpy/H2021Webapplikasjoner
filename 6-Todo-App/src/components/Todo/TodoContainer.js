@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 import TodoList from "./TodoList";
-import Alert from "./shared/Alert";
 import TodoForm from "./TodoForm";
-import Button from "./shared/Button";
-import useToggle from "./shared/useToggle";
 
-import mockDatabase from "../db/database";
+import Alert from "../shared/Alert";
+import Button from "../shared/Button";
+import useToggle from "../shared/useToggle";
+
+import mockDatabase from "../../db/database";
 
 const TodoContainer = () => {
   const [loadTrigger, setLoadTrigger] = useState(false);
@@ -35,8 +36,8 @@ const TodoContainer = () => {
   }, [loadTrigger]);
 
   // Check if there is any todos in the database, if not display alert
+
   if (pendingTodos.length === 0 && completedTodos.length === 0) {
-    //if (true)
     return (
       <Alert
         content="No past, or current todos found. Add a new one to get started!"
