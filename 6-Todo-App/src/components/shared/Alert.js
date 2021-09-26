@@ -10,7 +10,7 @@ const Alert = (props) => {
   };
 
   // Component CSS-styles
-  const styles = `relative py-3 my-10 pl-4 pr-10 leading-normal text-${ROLE[type]}-700 bg-${ROLE[type]}-100 rounded-lg`;
+  const styles = `py-3 my-10 pl-4 pr-10 leading-normal text-${ROLE[type]}-700 bg-${ROLE[type]}-100 rounded-lg`;
 
   return (
     <div role="alert" className={styles}>

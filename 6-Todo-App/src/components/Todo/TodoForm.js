@@ -1,8 +1,12 @@
 import Button from "../shared/Button";
 import Modal from "../shared/Modal";
 
-const TodoForm = ({ addTodo, formData, setFormData, toggleModal }) => {
-  const { title, content } = formData;
+const TodoForm = ({ toggleModal, formHandler }) => {
+  const {
+    formData: { title, content },
+    setFormData,
+    addTodo,
+  } = formHandler;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,6 +33,7 @@ const TodoForm = ({ addTodo, formData, setFormData, toggleModal }) => {
           value={title}
           onChange={updateValue}
           className="col-span-1 row-start-2 p-2 rounded-md border border-gray-500"
+          required
         />
         <label htmlFor="content" className="row-start-3 font-bold mt-4">
           Content
@@ -39,6 +44,7 @@ const TodoForm = ({ addTodo, formData, setFormData, toggleModal }) => {
           value={content}
           onChange={updateValue}
           className="col-span-full row-start-4 p-2 rounded-md border border-gray-500 resize-none h-40"
+          required
         ></textarea>
         <Button
           name="Add todo"
