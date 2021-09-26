@@ -79,13 +79,13 @@ const TodoContainer = () => {
   };
 
   return (
-    <div>
+    <>
       {modal && (
         <TodoForm
           addTodo={addTodo}
           formData={formData}
           setFormData={setFormData}
-          setModal={toggleModal}
+          toggleModal={toggleModal}
         />
       )}
 
@@ -102,7 +102,7 @@ const TodoContainer = () => {
           </>
         )}
       </section>
-    </div>
+    </>
   );
 };
 

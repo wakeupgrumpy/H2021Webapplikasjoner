@@ -1,6 +1,7 @@
 import Button from "../shared/Button";
+import Modal from "../shared/Modal";
 
-const TodoForm = ({ addTodo, formData, setFormData, setModal }) => {
+const TodoForm = ({ addTodo, formData, setFormData, toggleModal }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     addTodo();
@@ -14,25 +15,8 @@ const TodoForm = ({ addTodo, formData, setFormData, setModal }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
-      <form
-        className="grid grid-cols-2 gap-y-2 relative top-20 mx-auto p-20 border w-2/4 shadow-lg rounded-md bg-white"
-        onSubmit={handleSubmit}
-      >
-        <span class="absolute inset-y-4 right-0 flex items-top mr-4">
-          <svg
-            class="w-7 h-7 fill-current"
-            role="button"
-            viewBox="0 0 20 20"
-            onClick={() => setModal(false)}
-          >
-            <path
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-              fill-rule="evenodd"
-            ></path>
-          </svg>
-        </span>
+    <Modal toggleModal={toggleModal}>
+      <form className="grid grid-cols-2 gap-y-2" onSubmit={handleSubmit}>
         <label htmlFor="title" className="row-start-1 font-bold g">
           Title
         </label>
@@ -60,7 +44,7 @@ const TodoForm = ({ addTodo, formData, setFormData, setModal }) => {
           styles="col-start-2 row-start-5 text-lg"
         />
       </form>
-    </div>
+    </Modal>
   );
 };
 
