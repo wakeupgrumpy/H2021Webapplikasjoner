@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
 const useToggle = (initialState) => {
   const [isToggled, setIsToggled] = useState(initialState);
