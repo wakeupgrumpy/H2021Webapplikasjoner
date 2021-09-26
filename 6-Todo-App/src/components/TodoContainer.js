@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import mockDatabase from "../db/database";
+
 import TodoList from "./TodoList";
 import Alert from "./shared/Alert";
 import TodoForm from "./TodoForm";
 import Button from "./shared/Button";
+import useToggle from "./shared/useToggle";
+
+import mockDatabase from "../db/database";
 
 const TodoContainer = () => {
   const [loadTrigger, setLoadTrigger] = useState(false);
-  const [modal, setModal] = useState(false);
+  const [modal, toggleModal] = useToggle(false);
 
   const [pendingTodos, setPendingTodos] = useState([]);
   const [completedTodos, setCompletedTodos] = useState([]);
@@ -67,7 +70,8 @@ const TodoContainer = () => {
 
   const addTodo = () => {
     setPendingTodos([...pendingTodos, { id: Date.now(), ...formData }]);
-    setModal(!modal);
+    // setModal(!modal);
+    toggleModal();
   };
 
   return (
@@ -77,7 +81,7 @@ const TodoContainer = () => {
           addTodo={addTodo}
           formData={formData}
           setFormData={setFormData}
-          setModal={setModal}
+          setModal={toggleModal}
         />
       )}
 
@@ -89,9 +93,7 @@ const TodoContainer = () => {
         >
           My Todos
         </h2>
-        {!modal && (
-          <Button name="Add new todo" clickHandler={() => setModal(!modal)} />
-        )}
+        {!modal && <Button name="Add new todo" clickHandler={toggleModal} />}
 
         <TodoList todos={pendingTodos} todoHandler={todoHandler} />
 
