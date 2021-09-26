@@ -35,15 +35,17 @@ const TodoContainer = () => {
     setCompletedTodos(completed);
   }, [loadTrigger]);
 
-  // Check if there is any todos in the database, if not display alert
+  // Display alert if todo-lists are
+  const todoListAreEmpty = () =>
+    pendingTodos.length === 0 && completedTodos.length === 0;
 
-  if (pendingTodos.length === 0 && completedTodos.length === 0) {
-    return (
-      <Alert
-        content="No past, or current todos found. Add a new one to get started!"
-        type="red"
-      />
-    );
+  if (todoListAreEmpty) {
+    const message = {
+      content: "No past, or current todos found. Add a new one to get started!",
+      type: "danger",
+    };
+
+    return <Alert props={message} />;
   }
 
   // 🛑 REFACTOR THIS !! 🐴💩
