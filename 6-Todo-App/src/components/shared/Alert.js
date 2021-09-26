@@ -1,5 +1,5 @@
-const Alert = ({ props }) => {
-  const { content, type } = { ...props };
+const Alert = (props) => {
+  const { content, type } = props;
 
   // Different alert roles and colors
   const ROLE = {
