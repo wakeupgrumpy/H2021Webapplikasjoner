@@ -8,6 +8,7 @@ import Button from "../shared/Button";
 import useToggle from "../shared/useToggle";
 
 import mockDatabase from "../../db/database";
+import TodoHeader from "./TodoHeader";
 
 const TodoContainer = () => {
   const [loadTrigger, setLoadTrigger] = useState(false);
@@ -39,13 +40,13 @@ const TodoContainer = () => {
   const todoListAreEmpty = () =>
     pendingTodos.length === 0 && completedTodos.length === 0;
 
-  if (todoListAreEmpty) {
+  if (todoListAreEmpty()) {
     const message = {
       content: "No past, or current todos found. Add a new one to get started!",
       type: "danger",
     };
 
-    return <Alert props={message} />;
+    return <Alert {...message} />;
   }
 
   // 🛑 REFACTOR THIS !! 🐴💩
@@ -89,22 +90,14 @@ const TodoContainer = () => {
       )}
 
       <section className="grid grid-cols-3 gap-10">
-        <h2
-          className={`${
-            !modal ? "col-span-2" : "col-span-full"
-          } text-2xl font-extrabold`}
-        >
-          My Todos
-        </h2>
-        {!modal && <Button name="Add new todo" clickHandler={toggleModal} />}
+        <TodoHeader title="My todos" type="pending" />
+        <Button name="Add new todo" clickHandler={toggleModal} />
 
         <TodoList todos={pendingTodos} todoHandler={todoHandler} />
 
         {completedTodos.length > 0 && (
           <>
-            <h3 className="col-span-full text-xl font-extrabold">
-              Completed Todos
-            </h3>
+            <TodoHeader title="Completed Todos" type="completed" />
             <TodoList todos={completedTodos} todoHandler={todoHandler} />
           </>
         )}
