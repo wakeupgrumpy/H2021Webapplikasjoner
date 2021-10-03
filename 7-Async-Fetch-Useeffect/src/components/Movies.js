@@ -4,25 +4,28 @@ import Movie from './Movie'
 const Movies = () => {
   const [movies, setMovies] = useState([])
 
-  const getMovies = async () => {
+  // https://www.omdbapi.com/?i=tt3896198&apikey=91d19b23&s=star%20wars
+  const defaultQuery = 'Star Wars'
+
+  const getMovies = async (query) => {
     const response = await fetch(
-      'https://www.omdbapi.com/?i=tt3896198&apikey=91d19b23&s=star%20wars'
+      `https://www.omdbapi.com/?i=tt3896198&apikey=91d19b23&s=${query}&type=movie`
     )
-    const data = await response.json()
-    setMovies(data?.Search)
+    const results = await response.json()
+    return results?.Search
   }
 
-  console.log(movies)
-
   useEffect(() => {
-    getMovies()
+    getMovies(defaultQuery).then((results) => setMovies(results.slice(0, 5)))
   }, [])
-
-  // https://www.omdbapi.com/?i=tt3896198&apikey=91d19b23&s=star%20wars
 
   return (
     <section className="grid md:grid-cols-3 sm:grid-cols-2 gap-10">
-      {movies?.length > 0 && movies.map((movie) => <Movie movieInfo={movie} />)}
+      {movies?.length > 0 ? (
+        movies.map((movie) => <Movie key={movie.imdbID} movieInfo={movie} />)
+      ) : (
+        <h2>No results</h2>
+      )}
     </section>
   )
 }
