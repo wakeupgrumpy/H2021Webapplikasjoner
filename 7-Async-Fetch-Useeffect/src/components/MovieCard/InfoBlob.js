@@ -1,5 +1,6 @@
 const InfoBlob = ({ props }) => {
   const { color, content, link, Icon } = props
+  // Lage lenke/tekst komponent og heller flytte logikk til CardFooter??
   return (
     <div>
       <Icon className="h-4 xl:inline-block hidden mr-2" />

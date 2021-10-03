@@ -4,11 +4,11 @@ import {
   CalendarIcon,
 } from '@heroicons/react/outline'
 
-import CardFooter from './MovieCard/CardFooter'
-import Boxwrapper from './Shared/Boxwrapper'
+import CardFooter from './CardFooter'
+import Boxwrapper from '../Shared/Boxwrapper'
 
 const Movie = ({ movieInfo }) => {
-  const { Title, Year, imdbID, Type, Poster: posterUrl } = movieInfo
+  const { Year, imdbID, Type, Poster: posterUrl } = movieInfo
 
   const footerProps = {
     year: {
@@ -36,7 +36,7 @@ const Movie = ({ movieInfo }) => {
           <img
             className="transition duration-500 ease-in-out inset-0 h-full w-full object-contain transform hover:scale-105"
             src={`${posterUrl}`}
-            alt="Poster picture"
+            alt="Movie poster"
           />
         </div>
         <CardFooter fotterProps={footerProps} />
