@@ -1,14 +1,21 @@
+import { useTodoDispatch } from "../../context/TodoContext";
+
 import TodoHeader from "./TodoHeader";
 
 import Button from "../shared/Button";
 import Modal from "../shared/Modal";
 import useToggle from "../shared/useToggle";
 
-const TodoCard = ({ todoObject, todoHandler }) => {
+const TodoCard = ({ todoObject }) => {
+  const dispatch = useTodoDispatch();
+
   const [modal, toggleModal] = useToggle(false);
   const { id, completed, title, content } = todoObject;
-  const { removeTodo, completeTodo } = todoHandler;
-  const clickHandler = () => (completed ? removeTodo(id) : completeTodo(id));
+
+  const clickHandler = () => {
+    dispatch({ type: completed ? "REMOVE_TODO" : "COMPLETE_TODO", id: id });
+  };
+
   return (
     <>
       <article

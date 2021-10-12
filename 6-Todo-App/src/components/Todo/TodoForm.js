@@ -1,16 +1,18 @@
+import { useState } from "react";
+import { useTodoDispatch } from "../../context/TodoContext";
 import Button from "../shared/Button";
 import Modal from "../shared/Modal";
 
-const TodoForm = ({ toggleModal, formHandler }) => {
-  const {
-    formData: { title, content },
-    setFormData,
-    addTodo,
-  } = formHandler;
+const TodoForm = ({ toggleModal }) => {
+  const dispatch = useTodoDispatch();
+  const [formData, setFormData] = useState({ title: "", content: "" });
+
+  const { title, content } = formData;
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addTodo();
+    dispatch({ type: "ADD_TODO", todo: { title, content, id: Date.now() } });
+    toggleModal();
   };
 
   const updateValue = (event) => {

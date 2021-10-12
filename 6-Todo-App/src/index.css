@@ -9,6 +9,7 @@
 }
 
 @layer components {
+  /* Headers and text */
   .header-peding {
     @apply col-span-2 text-2xl font-extrabold;
   }
@@ -18,7 +19,37 @@
   .header-card {
     @apply text-lg font-bold line-clamp-1;
   }
+  /* Buttons */
   .button {
     @apply justify-self-end text-sm mt-3 py-2 px-6 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 focus:outline-none;
+  }
+  /* Alert */
+  .alert {
+    @apply py-3 my-10 pl-4 pr-10 leading-normal rounded-lg;
+  }
+  .primary {
+    @apply text-blue-700 bg-blue-100;
+  }
+  .success {
+    @apply text-green-700 bg-green-100;
+  }
+  .danger {
+    @apply text-red-700 bg-red-100;
+  }
+  .warning {
+    @apply text-yellow-700 bg-yellow-100;
+  }
+  /* Sections and wrappers */
+  .wrapper {
+    @apply p-6 bg-white shadow-md rounded-lg overflow-hidden;
+  }
+  .col {
+    @apply flex flex-col space-y-6;
+  }
+  .row-even {
+    @apply flex justify-between items-center;
+  }
+  .items-baseline {
+    @apply flex justify-center items-center space-x-4;
   }
 }
