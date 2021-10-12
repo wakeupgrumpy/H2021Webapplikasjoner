@@ -6,6 +6,12 @@ module.exports = {
       boxShadow: {
         blue: "0 10px 15px -3px rgba(59, 130, 246, 0.1), 0 4px 6px -2px rgba(59, 130, 246, 0.05)",
       },
+      colors: {
+        teal: {
+          DEFAULT: "#56d4c2",
+          dark: "#43a799",
+        },
+      },
     },
   },
   variants: {

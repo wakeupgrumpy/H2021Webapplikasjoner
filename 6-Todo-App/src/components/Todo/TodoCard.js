@@ -1,7 +1,6 @@
 import { useTodoDispatch } from "../../context/TodoContext";
 
 import TodoHeader from "./TodoHeader";
-
 import Button from "../shared/Button";
 import Modal from "../shared/Modal";
 import useToggle from "../shared/useToggle";

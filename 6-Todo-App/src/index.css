@@ -10,6 +10,9 @@
 
 @layer components {
   /* Headers and text */
+  .header {
+    @apply font-bold;
+  }
   .header-peding {
     @apply col-span-2 text-2xl font-extrabold;
   }
@@ -21,7 +24,7 @@
   }
   /* Buttons */
   .button {
-    @apply justify-self-end text-sm mt-3 py-2 px-6 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 focus:outline-none;
+    @apply justify-self-end text-sm mt-3 py-2 px-6 bg-teal text-white font-semibold rounded-lg shadow-md hover:bg-teal-dark focus:outline-none;
   }
   /* Alert */
   .alert {
@@ -44,12 +47,16 @@
     @apply p-6 bg-white shadow-md rounded-lg overflow-hidden;
   }
   .col {
-    @apply flex flex-col space-y-6;
+    @apply flex flex-col space-y-4;
   }
   .row-even {
     @apply flex justify-between items-center;
   }
   .items-baseline {
     @apply flex justify-center items-center space-x-4;
+  }
+  /* input */
+  .input {
+    @apply p-2 rounded-md border border-gray-500;
   }
 }

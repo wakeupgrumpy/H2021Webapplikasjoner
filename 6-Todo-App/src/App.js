@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-// import useToggle from "./hooks/useToggle";
 import useDb from "./hooks/useDb";
+
 import { TodoProvider } from "./context/TodoContext";
 
 import Navbar from "./components/Navbar";
