@@ -5,13 +5,13 @@ import TodoContainer from "./components/Todo/TodoContainer";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen text-gray-700">
+    <>
       <Navbar />
       <Layout>
         <TodoContainer />
       </Layout>
       <Footer />
-    </div>
+    </>
   );
 }
 
