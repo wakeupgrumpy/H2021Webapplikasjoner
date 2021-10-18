@@ -11,7 +11,7 @@ import MovieInfo from '../MovieInfo'
 import Boxwrapper from '../Shared/Boxwrapper'
 import Modal from '../Shared/Modal'
 
-import useToggle from '../Shared/useToggle'
+import useToggle from '../../hooks/useToggle'
 
 const Movie = ({ movieInfo }) => {
   const { Title, Year, imdbID, Type, Poster: posterUrl } = movieInfo

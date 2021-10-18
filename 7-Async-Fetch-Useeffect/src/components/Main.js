@@ -1,42 +1,31 @@
 import { useEffect, useState } from 'react'
+import { useApi } from '../hooks/useApi'
+
 import Movies from './Movies'
 import Search from './Search'
+import Alert from './Shared/Alert'
 import Boxwrapper from './Shared/Boxwrapper'
+import Loading from './Shared/Loading'
 
 const Main = () => {
   const [searchQuery, setSearchQuery] = useState('')
-  const [movies, setMovies] = useState([])
+  const { data, error, isLoading, getMovies } = useApi()
 
   const defaultQuery = 'Star Wars'
 
-  const getMovies = async (query) => {
-    const response = await fetch(
-      `https://www.omdbapi.com/?apikey=91d19b23&s=${query}&type=movie`
-    )
-    const results = await response.json()
-    return results?.Search
-  }
-
   useEffect(() => {
-    getMovies(defaultQuery).then((results) => setMovies(results.slice(0, 5)))
-  }, [])
+    getMovies(defaultQuery, 5)
+  }, [getMovies])
 
-  const removeDuplicates = (movieList) =>
-    movieList.filter(
-      (v, i, a) => a.findIndex((t) => t.imdbID === v.imdbID) === i
-    )
-
-  const doSearch = () =>
-    getMovies(searchQuery).then((results) => {
-      setMovies(results ? removeDuplicates(results) : null)
-    })
+  const doSearch = () => getMovies(searchQuery)
 
   return (
     <main className="w-3/5 mx-auto my-12 flex flex-col space-y-10">
       <Boxwrapper>
         <Search searchQuerHandler={{ setSearchQuery, doSearch }} />
       </Boxwrapper>
-      <Movies movies={movies} />
+      {error ? <Alert type="danger">{error}</Alert> : null}
+      {isLoading ? <Loading /> : <Movies movies={data} />}
     </main>
   )
 }

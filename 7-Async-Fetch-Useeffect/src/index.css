@@ -7,3 +7,53 @@
     @apply bg-gray-100 text-gray-900 font-sans;
   }
 }
+@layer components {
+  /* Headers and text */
+  .header {
+    @apply font-bold;
+  }
+  .header-peding {
+    @apply col-span-2 text-2xl font-extrabold;
+  }
+  .header-completed {
+    @apply col-span-full text-xl font-extrabold;
+  }
+
+  /* Buttons */
+  .button {
+    @apply px-6 py-3 text-white rounded-lg bg-yellow-500 hover:bg-yellow-600;
+  }
+  /* Alert */
+  .alert {
+    @apply py-3 my-10 pl-4 pr-10 leading-normal rounded-lg;
+  }
+  .primary {
+    @apply text-blue-700 bg-blue-100;
+  }
+  .success {
+    @apply text-green-700 bg-green-100;
+  }
+  .danger {
+    @apply text-red-700 bg-red-100;
+  }
+  .warning {
+    @apply text-yellow-700 bg-yellow-100;
+  }
+  /* Sections and wrappers */
+  .wrapper {
+    @apply p-6 bg-white shadow-md rounded-lg overflow-hidden;
+  }
+  .col {
+    @apply flex flex-col space-y-4;
+  }
+  .row-even {
+    @apply flex justify-between items-center;
+  }
+  .items-baseline {
+    @apply flex justify-center items-center space-x-4;
+  }
+  /* input */
+  .input {
+    @apply p-3 rounded-lg border focus:shadow focus:outline-none;
+  }
+}

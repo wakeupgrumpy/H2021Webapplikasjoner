@@ -15,15 +15,11 @@ const Search = ({ searchQuerHandler }) => {
       <SearchIcon className="text-gray-400 hover:text-gray-500 h-7" />
       <input
         type="text"
-        className="w-full p-3 rounded-lg border focus:shadow focus:outline-none"
+        className="w-full input"
         placeholder="Search movies..."
         onChange={updateSearchQuery}
       />
-      <button
-        type="submit"
-        onClick={searchClick}
-        className="px-6 py-3 text-white rounded-lg bg-yellow-500 hover:bg-yellow-600"
-      >
+      <button type="submit" onClick={searchClick} className="button">
         Search
       </button>
     </form>
