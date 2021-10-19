@@ -2,6 +2,10 @@
 
 Denne oppgaven skal vi lage en enkel komponenet som skal testes. Valgte istedet å lage en ny enkel todo app.
 
+![Viser todo applikasjonen](todo-test.png)
+
+### Test resultater
+
 ```
  PASS  src/components/Task.test.js
  PASS  src/components/Todos.test.js
